@@ -982,11 +982,11 @@ int main(int argc, char *argv[])
     if ((mode == AFSK) || (mode == CW))
     {
       get_tlm();
-      sleep(10);
+      sleep(5);
       //      fprintf(stderr, "INFO: Sleeping for 25 sec\n");
 
-      int rand_sleep = (int)rnd_float(0.0, 5.0);
-      sleep(rand_sleep);
+      //int rand_sleep = (int)rnd_float(0.0, 5.0);
+      //sleep(rand_sleep);
       //      fprintf(stderr, "INFO: Sleeping for extra %d sec\n", rand_sleep);
     }
     else if ((mode == FSK) || (mode == BPSK))

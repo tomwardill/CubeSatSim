@@ -1209,7 +1209,9 @@ void get_tlm(void)
     }
     else
     { // APRS
-
+      printf("%4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f \n",
+             voltage[map[PLUS_X]], voltage[map[MINUS_X]], voltage[map[PLUS_Y]], voltage[map[MINUS_Y]],
+             voltage[map[PLUS_Z]], voltage[map[MINUS_Z]], voltage[map[BAT]], voltage[map[BUS]]);
       sprintf(tlm_str, "BAT %4.2f %5.1f ", voltage[map[BAT]], current[map[BAT]]);
       strcat(str, tlm_str);
     }

@@ -1033,11 +1033,11 @@ int main(int argc, char *argv[])
     if ((mode == AFSK) || (mode == CW))
     {
       get_tlm();
-      sleep(25);
+      sleep(5);
       //      fprintf(stderr, "INFO: Sleeping for 25 sec\n");
 
-      int rand_sleep = (int)rnd_float(0.0, 5.0);
-      sleep(rand_sleep);
+      //int rand_sleep = (int)rnd_float(0.0, 5.0);
+    //sleep(rand_sleep);
       //      fprintf(stderr, "INFO: Sleeping for extra %d sec\n", rand_sleep);
     }
     else if ((mode == FSK) || (mode == BPSK))
@@ -1275,7 +1275,7 @@ void get_tlm(void)
     { // APRS
 
       if (c2cStatus == 0)
-        sprintf(tlm_str, "BAT %4.2f %5.1f ", batteryVoltage, batteryCurrent);
+        sprintf(tlm_str, "BAT %4.2f %5.1f VOL %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f ", voltage[map[BAT]], current[map[BAT]], voltage[map[PLUS_X]], voltage[map[MINUS_X]], voltage[map[PLUS_Y]], voltage[map[MINUS_Y]],
       else
         sprintf(tlm_str, "BAT %4.2f %5.1f C ", batteryVoltage, batteryCurrent);
 

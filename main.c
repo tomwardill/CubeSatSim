@@ -1275,8 +1275,8 @@ void get_tlm(void)
     { // APRS
 
       if (c2cStatus == 0)
-        sprintf(tlm_str, "BAT %4.2f %5.1f VOL %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f ", voltage[map[BAT]], current[map[BAT]], voltage[map[PLUS_X]], voltage[map[MINUS_X]], voltage[map[PLUS_Y]], voltage[map[MINUS_Y]],
-                voltage[map[PLUS_Z]], voltage[map[MINUS_Z]], voltage[map[BAT]], voltage[map[BUS]]);
+        sprintf(tlm_str, "BAT %4.2f %5.1f VOL %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f ", voltage[map[BAT]], current[map[BAT]], voltage[map[PLUS_X]], voltage[map[MINUS_X]], voltage[map[PLUS_Y]], voltage[map[MINUS_Y]],
+                voltage[map[PLUS_Z]], voltage[map[MINUS_Z]], voltage[map[BAT]]);
 
       else
         sprintf(tlm_str, "BAT %4.2f %5.1f C ", batteryVoltage, batteryCurrent);
